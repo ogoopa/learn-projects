@@ -1,0 +1,243 @@
+/* COMENTÁRIOS 
+
+EX:
+
+* Selector: h1
+* Declaration: o que está dentro de {}
+* Properties: color, font-size, etc
+* Property Value: blue, 60px, etc
+
+h1 {
+    color: blue;
+    font-size: 60px;
+    background: gray;
+}
+
+*/
+
+
+
+/* SELECTORS
+
+Conecta um elemento HTML com o CSS
+
+- Global Selector: *
+- Element/Type Selector: h1, h2, p, div
+- ID Selector: #box, #container
+- Class Selector: .red, .m-4
+- Atribute Selector, Pseudo-class, Pseudo-element, outros
+
+*/
+
+
+/* PROPERTIES
+
+border: borda, em pixels, ex: 1px solid red 
+margin: margem, o espeçamento por fora da caixa
+padding: espaço interno da caixa até o texto
+
+*/
+
+/* BOX MODEL
+
+Caixas
+
+- Você irá perceber que quase tudo são caixas do CSS;
+- Posicionamentos, tamanhos, espaçamentos, bordas, cores;
+- Caixa pode ficar ao lado uma da outra, ou acima;
+- Elementos HTML são caixas;
+
+*/
+
+/* ADICIONANDO O CSS
+
+- inline: atributo style
+- <style>: tag HTML que
+- <link>: arquivo CSS externo
+- @import: arquivo CSS externo
+
+*/
+
+h1 {
+    color: blue;
+    font-family: 'Yatra One', cursive;
+}
+
+strong {
+    color: red;
+}
+
+/* para utilizar fontes, dica: 
+https://fonts.google.com/
+
+- escolher a font;
+- ir em 'select this style;
+- ir no botão superior direito 'view your selected families'
+
+*/
+
+/* CASCATA
+
+a escolha do browser de qual regra aplicar, caso haja muitas regras para o mesmo elemento
+
+- seu estilo é lido de cima para baixo e leva em consideração 3 fatores
+    - origem do estilo
+    - especificidade
+    - importância
+
+* ORIGEM DO ESTILO
+
+o inline é maior do que a tag style, que é maior que a tag link
+
+inline > tag style > tag link
+
+*/
+
+/* ESPECIFICIDADE
+
+É um cálculo matemático, onde, cada tipo de seletor e origem do estilo, possuem valores a serem considerados.
+
+0.      Universal selector (* {}), combinators e negation pseudo-class (:not());
+1.      Element type selector e pseudo-elements (::before, ::after);
+10.     Classes e attribute selectors ([type="radio"]);
+100.    ID selector
+1000.   Inline
+
+*/
+
+/* REGRA !IMPORTANT
+
+- cuidade, evite o uso;
+- não é considerado uma boa prática;
+- quebra o fluxo natural da cascata;
+
+utilizando o '!important', o CSS irá priorizar a regra, quebrando a estrutura em cascata e as especificidades
+
+*/
+
+/* AT RULES
+
+- está relacionado ao comportamento do CSS
+- começa com o sinal de @ seguido do identificador e valor
+
+Exemplos
+
+@import - incluir um CSS externo
+@media  - regras condicionais para dispositivos
+@font-face - fontes externas
+@key-frames - animation
+
+*/
+
+/* SHORTHANDS
+
+- junção de propriedades
+- resumido
+- legível
+
+Detalhes:
+
+- não irá considerar propriedades anteriores
+- valores não especificados irão assumir o valor padrão
+- geralmente a ordem descrita não importa, mas se houver muitas propriedades com valores semelhantes, poderemos encontrar problemas
+
+Consultar em:
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties
+
+Propriedades que aceitam SHORTHAND
+
+
+
+* {
+    animation: ;
+    background: ;
+    border: ;
+    border-bottom: ;
+    border-color: ;
+    border-left: ;
+    border-radius: ;
+    border-right: ;
+    border-style: ;
+    border-top: ;
+    border-width: ;
+    column-rule: ;
+    columns: ;
+    flex: ;
+    flex-flow: ;
+    font: ;
+    grid: ;
+    grid-area: ;
+    grid-column: ;
+    grid-row: ;
+    grid-template: ;
+    list-style: ;
+    margin: ;
+    offset: ;
+    outline: ;
+    overflow: ;
+    padding: ;
+    place-content: ;
+    place-items: ;
+    place-self: ;
+    text-decoration: ;
+    transition: ;
+}
+
+
+*/
+
+
+
+css {
+    /* background properties */
+    background-color: #000;
+    background-image: url(images/bg.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    /* background shorthand */
+    background: #000 url(images/bg.gif) no-repeat left top;
+}
+
+*/
+
+
+/* FUNÇÕES
+
+- nome seguido de ()
+- recebe argumentos
+
+*/
+
+@import url("http://urlaqui.com/style.css")
+
+* {
+    color: rgb(255, 0, 180);
+    width: calc(100% - 10px);
+}
+
+/* DEVTOOLS
+
+Ferramenta de desenvolvedores que reside nos NAVEGADORES
+
+tecla F12
+
+*/
+
+/* VENDOR PREFIXES
+
+Permite que browsers adicionem 'FEATURES' a fim de colocar em uso alguma novidade que vemos no CSS
+
+Consultas
+http://ireade.github.io/which-vendor-prefix/
+http://caniuse.com
+
+*/
+
+p {
+    -webkit-background-clip: text; /* Chrome, Safari, iOS, Android */
+    -moz-background-clip: text; /* Mozilla Firefox */
+    -ms-background-clip: text; /* Internet Explorer */
+    -o-background-clip: text; /* Opera */
+}

@@ -1,0 +1,906 @@
+<!--
+    Hypertext Markup Language
+
+    HT = hypertext: hiper texto
+    M = markup: marcação
+    L = language: linguagem
+
+    Elementos: conteúdo entre a abertura e o fechamento de uma TAG
+    Elementos Vazios: TAG que não tem fechamento, por exemplor <img>
+
+    Atributos: características de um elemento;
+    Atributo booleano: verdadeiro ou falso, atributos que não precisam de definição;
+
+    Atributos mais utilizados (globais):
+        - class: criar classes
+        - contenteditable: editar conteudo (contenteditable="true")
+        - data-* : usado bastante no JavaScript
+        - hidden: esconde as tags
+        - id: usado geralmente para um atributo
+        - style: aplicar estilos direto no HTML, utilizado mais no CSS
+        - tabindex: utilizado para tabular elementos
+        - title: definir titulos
+
+
+    PARA CONHECER OUTROS ATRIBUTOS GLOBAIS
+    http://developer.mozilla.org
+
+    CARACTERES ESPECIAIS: 
+        &nbsp; = espaço de parágrafo
+        &lt; = símbolo <
+        &gt; = símbolo >
+        &amp; = símbolo &
+        &quot; = símbolo aspas "
+        &apos; = símbolo '
+
+-->
+
+<!-- Anatomia do documento -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> <!-- Agrupamento dos caracteres -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+        <!-- FAVICON - FAVORITE ICONS: ícones no título da pagina-->
+        <link rel="icon" ref="">
+
+        <!-- para iPhone não-retina, iPod Touch e dispositivos Android 2.1+ -->
+        <link rel="apple-touch-icon-precomposed" href="">
+        <title>Anatomia do documento</title> <!-- Título da Página -->
+
+        <!-- SEO: SEARCH ENGINE OPTIMIZATION (motores de busca =) -->
+        <meta name="author" content="Gustavo Parizi">
+        <meta name="description" content="Um website para iniciantes em programação"> <!-- esse description aparece na pesquisa google -->
+        <!-- <meta name="robots" content=""> para se comunicar com os robots do google -->
+
+        <!-- Open Graph: facebook -->
+        <meta property="og:image" content="https://cdnimages.com/image1.jpeg">
+        <meta property="og:description" content="texto para ser mostrado ao compartilhar no facebook">
+        <meta property="og:title" content="Titulo do Site">
+
+        <!-- Twitter -->
+        <meta name="twitter:title" content="Titulo do Site">
+    </head>
+
+    <body>
+        <h1>Título</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fugit nobis rem provident esse consequatur voluptate saepe atque, ducimus quos. Voluptas earum tempore molestias? Minima neque quibusdam pariatur architecto ipsam.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fugit nobis rem provident esse consequatur voluptate saepe atque, ducimus quos. Voluptas earum tempore molestias? Minima neque quibusdam pariatur architecto ipsam.
+        </p>
+    </body>
+</html>
+
+
+
+
+<!-- Para iniciar um documento HTML, uma dica é apertar o botão de "!" e tab (Emmet Abreviation) 
+<!DOCTYPE html>
+<html lang="en"> -- idioma (brasil é pt-br)
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+configura página para ser vista em dispositivos móveis e desktops 
+
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+Semântica
+
+    - Dar significado
+    - Elementos semânticos
+        - motores de busca
+        - leitores de acessibilidade
+
+
+    Seções comuns em documentos HTML:
+
+        - cabeçalho <header>
+            - utilizar no início da página, sendo da seção ou global
+            - pode ser usado em outros elementos semânticos como article, section
+            - múltiplos headers
+            - não possui atributos específicos
+
+        - navegação <nav>
+            - utilizado normalmente dentro de <header>, <article> ou <aside>
+            - representa a navegação do site
+            - não possui atributos específicos
+
+        - conteúdo principal <main>
+            - conteúdo único da página
+            - utilizar uma vez por página
+            - deve estar logo após o <body>
+
+        - conteúdo relacionado <article>
+            - pode se repetir diversas vezes no site
+            - pode ser visto como um fragmento do site e ser lido separadamente
+            - não possui atributos específicos
+
+        - barra lateral <aside>
+            - explicações do conteúdo
+            - glossário
+            - biografia do autor
+            - não é o 'SIDEBAR', a barra lateral dos sites
+            - não possui atributos específicos
+
+        - seção <section>
+            - utilizar título e conteúdo
+            - antigamente se usava <div>, hoje em dia se separam em seções
+            - geralmente, se utiliza dentro do main, ou do article
+
+        - rodapé <footer>
+            - geralmente no final da página
+            - informações do autor, copyright, contato, sitemap, voltar ao topo, 
+
+    Elementos não semânticos, para uso genérico
+
+        <div>
+            usado se não conseguir achar um elemento de bloco semântico
+        
+        <span>
+            usado se não conseguir achar um elemento de texto semântico
+        
+        em ambos, use atributos globais como id e class para entregar maior significado
+-->
+
+<!-- para criar mais li's ao mesmo tempo, pode se utilizar o fator * multiplicação, e digitar o conteudo entre chaves 
+
+        ul>li[data-item="$"]{Item $}*20
+
+        o cifrão $ é um fator multiplicador que irá incrementar com o numero do ite
+        o elemento entre [é o atributo]
+
+-->
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<ol>
+    <li></li>
+    <li></li>
+    <li></li>
+</ol>
+
+<h1></h1>
+
+<p>
+    <em></em>
+    <strong></strong>
+</p>
+
+<blockquote cite="digite aqui a url"> <!-- elemento para citação -->
+    "Nós (programadores), somos pagos para resolver problemas, não para memorizar soluções."
+    <cite>- Mayk Brito</cite>
+</blockquote>
+
+
+
+<!-- mostrar na tela com formato de código -->
+<pre>
+    <code>
+        document 
+            select.from
+    </code>
+</pre>
+
+<cite></cite> <!-- outra forma de usar um elemento para citar -->
+
+<abbr title=""></abbr> <!-- tag utilizada para abreviações -->
+
+<address></address> <!-- tag para detalhes de contato -->
+
+<h2>Glossário</h2>
+<dl> <!-- Description list -->
+    <dt>Hypertext</dt>
+    <dd>É um hipertexto com possibilidades...</dd>
+    <dt>Markup</dt>
+    <dd>Marcação do texto...</dd>
+</dl>
+
+<div></div> <!-- criar estrutura em bloco -->
+
+<span></span> <!-- criar estrutura em linha -->
+
+<!-- Elemento âncora -->
+<a href=""> Conteúdo</a>
+<a href="" download=""> Conteúdo</a>
+<a href="" target=""> Conteúdo</a>
+
+<!-- 
+    - Atributos Globais
+    -href
+    - para onde iremos quando clicamos no link?
+        - url completa
+        - fragmento
+        - e-mail
+        - telefone
+        - outros
+    - download
+    - target
+        - self (padrão - carrega o conteúdo na mesma página)
+        - _blank (utilizado para abrir novas abas)
+ -->
+
+ <p>Encontre-me</p>
+ <ul>
+     <li><a href="https://rocketseat.com.br" target="_blank">Website</a></li>
+     <li><a href="mailto:mayk@rocketseat.com.br">E-mail</a></li>
+     <li><a href="tel:+5511998887766">Telefone</a></li>
+ </ul>
+
+ <p>Saiba mais</p>
+<ul>
+    <li><a href="#about">Sobre mim</a></li>
+    <li><a href="#history">História</a></li>
+    <li><a href="#works">Trabalhos</a></li>
+</ul>
+
+<h1 id="about">Sobre mim</h1>
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, molestias. Voluptates deleniti, ipsam ad aliquid commodi nulla aperiam consequuntur, adipisci sunt ea quia distinctio. Rerum modi eius earum nulla minus?
+
+<h2 id="history">História</h2>
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vitae voluptate ad aperiam natus, dolore nulla expedita qui ipsam laboriosam? Recusandae magnam rem dolorum magni, non repellendus? Amet, sunt a!
+
+<h2 id="works">Trabalhos</h2>
+
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias eveniet placeat laborum, autem cupiditate repellat dolorem et quidem, ipsam facere provident inventore atque nulla reprehenderit, praesentium voluptates consectetur in similique!
+
+
+<h2>Links</h2>
+
+<!-- URL e Caminhos dos arquivos
+
+    URL - Uniform Resource Locator
+        - https://rocketseat.com.br
+        - Sequência de texto que define onde algo está localizado na Web
+        - URLs usam caminhos para encontrar arquivos
+
+    Caminhos dos arquivos
+        - Onde, no explorador de arquivos, onde um recurso está localizado
+ -->
+
+ <!-- Para abrir páginas que estão dentro do seu projeto, pode-se referenciar a página através da âncora -->
+ <a href="hyperlinks.html">Abrir Hyperlinks</a>
+
+ <a href="urls-caminhos.html">arquivo na mesma pasta</a>
+ <a href="../urls-caminhos.html">arquivo na pasta anterior</a>
+ <a href="./urls-caminhos.html">arquivos no diretório raíz</a>
+ <a href="../outros/urls-caminhos.html">arquivos em outras pastas (ex: pasta outros)</a>
+
+ <!-- URLs relativos e absolutos
+    - Absolutos
+        - inclui protocolo e nome de domínio
+        href="https://google.com"
+
+    - Relativos
+        - relativo à página aberta no momento
+        href="google.com"
+-->
+
+<!-- Tabelas Básicas
+
+    elemento <table>
+
+        Prós
+            - Visualização de dados via linhas e colunas
+            - Boa acessibilidade para leitura dos dados
+        
+        Contras
+            - Pouco flexível
+            - Precisa de estilização para melhor visualização
+        
+        Não usar
+            - Para criar seu layout
+-->
+
+<h2>Tabela Básica</h2>
+
+<table>
+    <caption>Pessoas</caption>
+    <thead> <!-- Cabeçalho -->
+        <tr> <!-- tr: Table Row - Linha -->
+            <th>Nome</th> <!-- th: Table Head: nome primeira linha -->
+            <th>Idade</th>
+            <th>Sexo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Miguel</td> <!-- td: Table Description: valores da linha -->
+            <td>35</td>
+            <td>Masculino</td>
+        </tr>
+        <tr>
+            <td>Mariana</td>
+            <td>22</td>
+            <td>Feminino</td>
+        </tr>
+        <tr>
+            <td>Moisés</td>
+            <td>99</td>
+            <td>Masculino</td>
+        </tr>
+    </tbody>
+    <tfoot> <!-- Rodapé -->
+        <tr>
+            <td>Total</td>
+            <td>3</td>
+            <td>3</td>
+        </tr>
+    </tfoot>
+
+</table>
+
+<!-- Tabelas Complexas 
+    2 lojas
+    quantos produtos foram produzidos
+    quantos vendidos
+    agrupado por nome dos produtos
+
+-->
+
+<h2>Tabela Complexa</h2>
+
+<table>
+    <caption>Produzidos X Vendidos por loja</caption>
+    <colgroup>
+        <col>
+        <col span="2" style="background-color: red">
+        <col span="2" style="background-color: blue">
+    </colgroup>
+    <thead>
+        <tr>
+            <th rowspan="2"></th>
+            <th colspan="2" scope="colgroup">Afonso Pena</th>
+            <th colspan="2" scope="colgroup">Antônia Pereira</th>
+        </tr>
+        <tr>
+            <th scope="col">Produzidos</th>
+            <th scope="col">Vendidos</th>
+            <th scope="col">Produzidos</th>
+            <th scope="col">Vendidos</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Vassouras</th>
+            <th>50</th>
+            <th>30</th>
+            <th>20</th>
+            <th>20</th>
+        </tr>
+        <tr>
+            <th scope="row">Baldes</th>
+            <th>44</th>
+            <th>27</th>
+            <th>12</th>
+            <th>11</th>
+        </tr>
+        <tr>
+            <th scope="row">Rodos</th>
+            <th>60</th>
+            <th>60</th>
+            <th>40</th>
+            <th>32</th>
+        </tr>
+    </tbody>
+
+</table>
+
+<!-- Formulários
+
+    Para que serve?
+        - Capturar dados de entrada (input)
+        - Interação
+        - Controle
+    
+    Dominar
+        - Estilização
+        - Validação
+        - Controles customizados
+        - JavaScript
+
+
+    <form>
+        - Elemento que definirá um formulário
+        - É um container estilo <section> <footer>
+
+    Atributos básicos
+        - action
+        - method
+
+    Atenção: não é recomendado criar um <form> dentro de outro <form>
+-->
+
+<form action="" method="GET"></form> <!-- methodos GET e POST -->
+
+<!-- 
+    <fieldset></fieldset>
+        - agrupamento de campos
+        - mesmo propósito
+        - semântico
+        - acessibilidade
+    
+    Atributos especiais
+        - disabled
+            - desabilita todos os elementos internos
+            - não serão enviados ao submeter o formulário
+        - form
+            - o id de um formulário ao qual esse fieldest pertence
+            - não precisa estar dentro do formulário
+        - name
+            - nome do grupo
+        
+    <legend>
+        - nome do agrupamento
+        - primeiro elemento dentro do fieldset
+ -->
+
+ <h2>Formulários</h2>
+
+ <form id="contato" action="">  
+     <button>Enviar
+     </button>
+ </form>
+
+ <fieldset form="contato" name="inputs-contato">
+    <legend>Contato</legend>
+    <label for="">Nome</label>
+    <input type="text">
+</fieldset>
+
+
+<!-- Lavel, duas formas de usar -->
+<h2>Label 1</h2>
+<label>
+    Nome Completo:
+    <input type="text">
+</label>
+
+<h2>Label 2</h2>
+<label for="nome">Nome Completo:</label>
+<input id="nome" type="text">
+
+<h2>Botões</h2>
+
+<!-- <button>
+
+    - representa um botão
+    - usado para enviar formulários
+    - é estilizado pelo user agent
+
+    Atributos comuns
+    - type
+        - submit - envia o formulário
+        - reset - reseta o formulário
+        - button - envia o formulário
+    - autofocus
+    - disabled
+    - name
+    - value
+    - form
+-->
+
+<button type="submit">Clique aqui</button>
+
+<form action=""></form>
+
+<!-- 
+    # <datalist> 
+        - lista de valores como sugestão a uma tag <input>
+        - valores sugestivos e não obrigatórios
+        - usuário poderá selecionar um dos valores, ou colocar um valor diferente na sugestão
+
+    # list
+        - recebe como valor o id de u, <datalist> residente no mesmo documento
+
+    # tipos de input suportados
+        - text, search, url, tel, email, date, month, week, time, datetime-local, number, range e color
+
+        *valores de datalist que não são compatíveis com o tipo do <input> não serão apresentados
+
+    # inputs não suportados (conforme especificação)
+        - hidden, password, checkbox, radio, file ou qualquer tipo de button
+
+    # user agent
+        - verificar a compatibilidade com o browser, utilizando o site
+        https://caniuse.com
+-->
+
+<h2>Datalist</h2>
+
+<input 
+    type="text"
+    list="fruitsdata"
+    placeholder="escolha uma fruta">
+
+<datalist id="fruitsdata">
+    <option>maçã</option>
+    <option>banana</option>
+    <option>manga</option>
+    <option>laranja</option>
+    <option>cereja</option>
+</datalist>
+
+<!-- 
+    <input>
+        - um dos mais usados em formulários
+        - aceita os mais diversos tipos de dados
+        - um dos mais poderosos e complexos
+        - elevado número de combinações
+    
+    Atributos
+        - type: text, date, number, email, file (o atributo file é perigoso pois aceita diversos tipos de input), password
+        - name
+        - id
+        - autocomplete: email (atributo muito interessante para facilitar o trabalho do usuário)
+        - autofocus: atributo do tipo boolean (não precisa declarar o tipo =""), quando é utilizado, o cursor é direcionado diretamente para o input. só pode ser utilizado um atributo autofocus por página
+        - disabled: também do tipo boolean, ele desabilita o input
+        - value
+        - readonly: boolean, serve para que o formulário só possibilite a leitura do value (quase todos)
+        - form (no input, deve ser utilizado junto ao atributo name) (quase todos)
+        - name
+        - required: boolean (quase todos), torna o campo obrigatório
+        - placeholder: email, password, search, tel, text, url, (quase todos)
+ -->
+
+ <h2>Input</h2>
+
+ <input type="text" autocomplete="email">
+
+ <!-- Passwords
+    <input type="password">
+
+    - Colocar uma senha de maneira segura
+    - Esconde o que está sendo digitado no campo
+    - O estilo da apresentação do campo, depende do User Agent (navegador)
+
+    Atributos
+        - minlength
+        - maxlength
+        - size
+        - pattern
+            - expressão regular validar o que está sendo digitado no campo
+            - altamente recomendado para o uso de um padrão de segurança alta de senhas
+        - placeholder
+        - readonly / disabled
+        - required
+        - inputmode
+            - poderá alterar o uso do teclado em smartphones
+            - exemplo: queremos que o cliente só adicione números
+                - inputmode="numeric"
+        - autocomplete: on, off, new-password
+-->
+
+<h2>Password</h2>
+
+<form action="">
+    <input 
+        type="password"
+        minlength="8"
+        maxlength="12"
+        size="12"
+        required
+    >
+    <button>Enviar</button>
+    
+</form>
+
+<!-- Email
+    <input type="email">
+    - valida se o valor digitado é um e-mail
+
+    Atributos
+    - placeholder
+    - readonly
+    - disabled
+    - value
+    - required (obrigatório)
+    - multiple: o campo irá receber 1 ou mais emails, separados por virgulas
+    - minlength / maxlength
+    - size
+    - pattern
+        - uso de expressão regular para validar o campo
+        - exemplo: o usuário só poderá colocar e-mail do dominio rocketseat.com.br
+            pattern=".+@rocketseat\.com\.br"
+-->
+
+<h2>Input Email</h2>
+
+<form action="">
+    <input 
+        type="email"
+        pattern=".+@rocketseat\.com\.br"
+        title="Somente e-mails @rocketseat.com.br"
+    >
+    <button type="submit">Enviar</button>
+</form>
+
+<!-- SpellCheck
+habilita a verificação ortográfica do input
+
+true or false
+-->
+
+<!-- File
+    Atributos
+        - value
+        - accept: descreve que tipos de arquivos serão aceitos
+            exemplo: .doc, .docx, .pdf, audio/*, image/png, .png
+        - files: a lista de arquivo ou arquivos
+        - multiple: boolean, permite o envio de muitos arquivos
+
+-->
+
+<h2>Files</h2>
+
+<form action="" method="post" enctype="multipart/form-data"> <!-- atributos inportantes para o input de file -->
+    <input 
+        type="file"
+        accept=".pdf"
+        multiple>
+</form>
+
+<!-- Type Color 
+    Atributos
+        - value
+        - list
+    -->
+
+<h2>Color</h2>
+
+<input 
+    type="color"
+    value="RGB">
+
+<h3>por cor</h3>
+
+<input type="color" list="">
+
+<!-- Checkbox
+
+    <input type="checkbox">
+        - caixas que podem ser marcadas
+        - selecionar um valor para ser enviado
+        - se não selecionado, não será enviado nenhum dado
+    
+    Atributos
+        - globais
+        - value: valor que o campo contém, se não estiver presente, o padrão é on
+        - checked: boolean, para deixar o campo marcado por padrão
+-->
+
+<h2>Checkbox</h2>
+<label for="subscrive">Receber notificações</label>
+<input type="checkbox" name="subscrive" id="subscribe" value="ok">
+
+<!-- Marcar múltiplos valores -->
+
+<h3>múltiplos valores</h3>
+
+<fieldset>
+    <legend>Escolha seus interesses</legend>
+    <div>
+        <input type="checkbox" id="coding" name="interest" value="coding" checked>
+        <label for="coding">Coding</label>
+    </div>
+    <div>
+        <input type="checkbox" id="music" name="interest" value="music">
+        <label for="music">Music</label>
+    </div>
+</fieldset>
+
+<!-- Hidden
+    <input type="hidden" id="timestamp" name="timestamp">
+
+    - invisível ao usuário
+    - será enviado com o formulário
+    - não receberá foco
+    - leitores de tela não percebem este campo
+-->
+<input type="hidden" id="timestamp" name="timestamp" value="">
+
+<!-- Radio
+    <input type="radio">
+    - Projetado para selecionar uma única opção de um grupo de opções
+
+    Atributos
+    - checked
+    - value
+
+-->
+<h2>Radio</h2>
+
+<fieldset>
+        <legend>Bora tomar um café</legend>
+        <label for="yep">sim</label>
+        <input type="radio" id="yep" name="coffee" value="yes" checked>
+
+        <label for="nono">não</label>
+        <input type="radio" id="nono" name="coffee" value="no">
+</fieldset>
+
+<!-- Textarea
+    <textarea>
+        - mais de uma linha
+        - textos grandes
+    
+    Atributos
+        - id
+        - name: recebe o valor inputado no textarea
+        - rows e cols: definem o tamanho do quadro
+        - maxlength e minlength: define o numero minimo e maximo de caracteres
+        - wrap: off, para quando o texto não tem quebra de linha, tem as opções hard e soft também
+        .. outros comuns aos <inputs>
+            - autocomplete, autofocus, disabled, placeholder, readonly, form, required
+-->
+
+<h2>Textarea</h2>
+
+<label for="message">Mensagem</label>
+<textarea id="message"></textarea>
+
+<!-- Select 
+    <select>
+        - controle que fornece um menu de opções
+    <option>
+        - contém as opções a serem selecionadas
+        - atributos necessários
+            - value
+    
+    Atributos únicos
+        - multiple: habilita multiplas opções
+        - size: quando opções visíveis?
+ -->
+
+ <h2>Select</h2>
+
+ <label for="carselect">Qual o modelo do carro?</label>
+ <br>
+ <select name="carmodel" id="carselect" multiple>
+     <option value="">Selecione o modelo</option>
+     <option value="fiat">Uno</option>
+     <option value="audi">A3</option>
+     <option value="bmw">X6</option>
+ </select>
+
+<br>
+<br>
+ <label for="carselect">Qual o modelo do carro?</label>
+ <br>
+ <select name="carmodel" id="carselect"> <!-- sem o multiple -->
+     <option value="">Selecione o modelo</option>
+     <option value="fiat">Uno</option>
+     <option value="audi">A3</option>
+     <option value="bmw">X6</option>
+ </select>
+
+ <!-- Optgroup -->
+
+ <h2>Optgroup</h2>
+ 
+ <label>Please choose one or more pets:
+    <select name="pets" multiple size="4">
+        <optgroup label="4-legged pets">
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="hamster" disabled>Hamster</option>
+        </optgroup>
+        <optgroup label="flying pets">
+            <option value="parrot">Parrot</option>
+            <option value="macaw">Macaw</option>
+            <option value="albatross">Albatross</option>
+        </optgroup>
+    </select>
+ </label>
+
+ <!-- Search
+    <input type="search" />
+    - para campos de busca
+    - é igual ao campo do tipo 'text', mas poderá ser um pouco diferente dependendo do navegador (user agent)
+
+    Atributos
+        - list / <datalist>
+        - pattern
+        - aria-label
+-->
+
+<h2>Search</h2>
+
+<datalist id="searchterms">
+    <option>Mac</option>
+    <option>Windows</option>
+    <option>Linux</option>
+</datalist>
+
+<form action="">
+    <input type="search" name="q" list="searchterms" placeholder="Digite sua busca" aria-label="Campo de pesquisa"> <!-- name="q" : searchterm -->
+    <button>Pesquisar</button>
+</form>
+
+<!-- Number
+    <input type="number" />
+    -- entrada de números
+    
+    Atributos
+    - min/max
+    -step: pula a quantidade de números, por exemplo, de 100 em 100
+-->
+<h2>Number</h2>
+<form action="">
+    <input type="number" min="100" max="1000" step="100">
+    <button>Enviar</button>
+</form>
+
+<!-- Range 
+    <input type="range">
+    - controle para selecionar um valor numérico
+    - slider ou dial control
+
+    Atributos
+        - min/max: possível usar valores negativos
+        - step: é possível usar valores decimais, ex 0.1
+-->
+
+<h2>Range</h2>
+
+<input type="range" min="1" max="10">
+
+<!-- Data e hora
+    campos interessantes (ainda sem um bom suporte)
+    fique de olho em https://caniuse.com
+-->
+
+<h2>Data e hora</h2>
+<h3>Date</h3>
+<input type="date" value="yyyy-mm-dd">
+
+<h3>Datetime-local</h3>
+<input type="datetime-local">
+
+<h3>Month</h3>
+<input type="month">
+
+<h3>Time</h3>
+<input type="time">
+
+<h3>Week</h3>
+<input type="week">
+
+
+<!-- Hierarquia no CSS
+
+TAG = Força 1
+CLASS = Força 10
+ID = Força 100
+
+as forças podem se somar nas referências do CSS, respeitando a hierarquia
+
+INLINE (no HTML) tem a força 1000
+
+-->
+
+<!-- Description List -->
+
+<dl>
+    <dt>Termo</dt>  
+    <dd>Descrição</dd> 
+<dl>    
+    
+
+

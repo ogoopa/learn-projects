@@ -1,0 +1,24 @@
+C:\Users\guspa\Desktop\UDEMY - FULLSTACK\CONSOLECORE\GameTOP\bin\Debug\net5.0\GameTOP.exe
+C:\Users\guspa\Desktop\UDEMY - FULLSTACK\CONSOLECORE\GameTOP\bin\Debug\net5.0\GameTOP.deps.json
+C:\Users\guspa\Desktop\UDEMY - FULLSTACK\CONSOLECORE\GameTOP\bin\Debug\net5.0\GameTOP.runtimeconfig.json
+C:\Users\guspa\Desktop\UDEMY - FULLSTACK\CONSOLECORE\GameTOP\bin\Debug\net5.0\GameTOP.runtimeconfig.dev.json
+C:\Users\guspa\Desktop\UDEMY - FULLSTACK\CONSOLECORE\GameTOP\bin\Debug\net5.0\GameTOP.dll
+C:\Users\guspa\Desktop\UDEMY - FULLSTACK\CONSOLECORE\GameTOP\bin\Debug\net5.0\ref\GameTOP.dll
+C:\Users\guspa\Desktop\UDEMY - FULLSTACK\CONSOLECORE\GameTOP\bin\Debug\net5.0\GameTOP.pdb
+C:\Users\guspa\Desktop\UDEMY - FULLSTACK\CONSOLECORE\GameTOP\obj\Debug\net5.0\GameTOP.csprojAssemblyReference.cache
+C:\Users\guspa\Desktop\UDEMY - FULLSTACK\CONSOLECORE\GameTOP\obj\Debug\net5.0\GameTOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guspa\Desktop\UDEMY - FULLSTACK\CONSOLECORE\GameTOP\obj\Debug\net5.0\GameTOP.AssemblyInfoInputs.cache
+C:\Users\guspa\Desktop\UDEMY - FULLSTACK\CONSOLECORE\GameTOP\obj\Debug\net5.0\GameTOP.AssemblyInfo.cs
+C:\Users\guspa\Desktop\UDEMY - FULLSTACK\CONSOLECORE\GameTOP\obj\Debug\net5.0\GameTOP.csproj.CoreCompileInputs.cache
+C:\Users\guspa\Desktop\UDEMY - FULLSTACK\CONSOLECORE\GameTOP\obj\Debug\net5.0\GameTOP.dll
+C:\Users\guspa\Desktop\UDEMY - FULLSTACK\CONSOLECORE\GameTOP\obj\Debug\net5.0\ref\GameTOP.dll
+C:\Users\guspa\Desktop\UDEMY - FULLSTACK\CONSOLECORE\GameTOP\obj\Debug\net5.0\GameTOP.pdb
+C:\Users\guspa\Desktop\UDEMY - FULLSTACK\CONSOLECORE\GameTOP\obj\Debug\net5.0\GameTOP.genruntimeconfig.cache
+C:\Users\guspa\Desktop\FULLSTACK\ALURA\Freeway\CONSOLECORE\GameTOP\obj\Debug\net5.0\GameTOP.csprojAssemblyReference.cache
+C:\Users\guspa\Desktop\FULLSTACK\ALURA\Freeway\CONSOLECORE\GameTOP\obj\Debug\net5.0\GameTOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guspa\Desktop\FULLSTACK\ALURA\Freeway\CONSOLECORE\GameTOP\obj\Debug\net5.0\GameTOP.AssemblyInfoInputs.cache
+C:\Users\guspa\Desktop\FULLSTACK\ALURA\Freeway\CONSOLECORE\GameTOP\obj\Debug\net5.0\GameTOP.AssemblyInfo.cs
+C:\Users\guspa\Desktop\FULLSTACK\ALURA\Freeway\CONSOLECORE\GameTOP\obj\Debug\net5.0\GameTOP.csproj.CoreCompileInputs.cache
+C:\Users\guspa\Desktop\FULLSTACK\ALURA\Freeway\CONSOLECORE\GameTOP\obj\Debug\net5.0\GameTOP.dll
+C:\Users\guspa\Desktop\FULLSTACK\ALURA\Freeway\CONSOLECORE\GameTOP\obj\Debug\net5.0\ref\GameTOP.dll
+C:\Users\guspa\Desktop\FULLSTACK\ALURA\Freeway\CONSOLECORE\GameTOP\obj\Debug\net5.0\GameTOP.pdb

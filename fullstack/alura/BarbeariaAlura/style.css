@@ -1,0 +1,431 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caixa {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color:#C78C19;
+    text-decoration: underline;
+}
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px; 
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.produtos li:hover {
+    border-color: #C78C19;   
+}
+
+.produtos li:active {
+    border-color: #088C19;
+}
+
+.produtos li:hover h2 {
+    font-size: 34px;
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao {
+    font-size: 18px;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    background: url("bg.jpg");
+    padding: 40px 0;
+
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+main {
+
+}
+
+
+.form-contato {
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label, form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padrao {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+}
+
+.enviar:hover {
+    background-color: darkorange;
+    transform: scale(1.2);
+}
+
+table {
+    margin: 20px 40px;
+}
+
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+/* CSS Página Inicial */
+
+.banner {
+    width: 100%;
+}
+
+.principal {
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
+/*  
+
+.titulo-principal:first-letter { -- pseudo classe para formatar a primeira letra --
+    font-weight: bold;
+}
+
+.titulo-principal:before { -- pseudo classe para inserir conteudo antes ou depois no CSS --
+    content: "[";
+}
+
+.titulo-principal:after {
+    content: "]";
+}
+*/
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+    text-shadow: 0.5px 0.5px #AAAAAA ; /* sombra no texto */
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+/* SELETOR AVANÇADO
+
+    :not = utilizado para excluir determinadas regras, como no caso, o id: "missão"
+
+        .principal p:not(#missao) {
+        }
+
+*/
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensilios {
+    width: 120px; /* width = LARGURA */
+    float: left;
+    margin: 0 20px 20px 0;
+    box-shadow: inset 0 0 5px black; /* inset é utilizado para sombra interna */
+}
+
+/* IMPORTANDO MAPAS 
+
+- maps.google
+- ir na localização desejada
+- no menu do google (canto superior esquerdo), ir em 'compartilhar ou incorporar mapa'
+- clicar em 'Incorporar um Mapa'
+- copiar o HTML
+- inserir o HTML no local desejado 
+
+*TAG <iframe>
+
+*/
+
+.mapa {
+    padding: 3em 0; /* padding: ESPAÇAMENTO INTERNO */
+    background: linear-gradient(#FEFEFE, #888888); /* é possível colocar por exemplo a inclinação em graus, no início do linear-gradient(45deg, #FEFEFE, #888888), e definir também o percentual de distribuição do linear-gradient(75% #FEFEFE, 25% #888888, 0 #AAAAAA), ainda existe a propriedade radial-gradiente(que plota em forma circular) */
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p {
+    margin: 0 0 2em; /* margin: ESPAÇAMENTO EXTERNO ou MARGEM */
+    text-align: center;
+}
+
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+}
+
+.itens {
+    line-height: 1.5; /* line-height: ALTURA DA LINHA*/
+}
+
+.itens:first-child { /* first-child: PRIMEIRO FILHO, PSEUDO ELEMENTO para selecionar o primeiro item da lista. Podem ser usados ainda o 'last-child' e o 'nth-child(x)'. Para o nth-child, ainda pode se colocar os argumentos (2n) ou (2n -1), para se referir à todos os numeros pares ou ímpares */
+    font-weight: bold;    
+}
+
+.itens:before {
+    content: "\2605";
+}
+
+.imagem-beneficios {
+    width: 60%;
+    opacity: 0.9; /* opacidade, aumenta ou diminui (de 0 a 1 a opacidade de um elemento)  */
+    transition: 400ms; /* 400 mili-segundos */
+    box-shadow: 10px 10px 5px 2px #000000; /* sombra FORMATO >> box-shadow: X Y BLUR INTENSIDADE ColorHEX  */
+}
+
+/* É possível ainda utilizar a opacidade em cores, utilizando o padrão RGB. A declaração fica da seguinte forma:
+
+    sem a opacidade
+        
+        p {
+            color: rgb(0,0,0);
+        }
+
+    com a opacidade (camada ALPHA)
+
+        p {
+            color: rgba(0,0,0,0.3);
+        }
+
+*/
+
+.imagem-beneficios:hover {
+    opacity: 1;
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block; /* para usar o inline-block, o código respeita também todo o espaçamento utilizado na identação do HTML. Neste caso, como o width da imagem-benefícios está em 60% e o da lista-benefícios está em 60%, o HTML da lista <ul> e o da imagem <img> não podem conter espaços entre si no código */
+    vertical-align: top;
+}
+
+/* Fontes preparadas para WEB, se adapta a diversos navegadores
+
+- Fontes Públicas
+- Abertas
+- Proprietárias Microsoft, Apple e outras
+
+Agregadores de fonte: Google Fonts
+https://fonts.google.com/
+
+*/
+
+/* IMPORTANDO VÍDEOS YOUTUBE 
+
+- youtube.com
+- ir no vídeo desejado
+- ir em compartilhar
+- clicar em Incorporar
+- copiar o HTML
+- inserir o HTML no local desejado 
+
+*TAG <iframe>
+
+*/
+
+.video {
+    width: 560px;
+    margin: 2em auto;
+}
+
+/* PSEUDO ELEMENTOS
+
+:hover
+:active
+:visited
+:required
+
+*/
+
+/* SELETORES AVANÇADOS
+
+- utilizando o simbolo '>', é possível designar todos os filhos diretos de uma tag.
+- os seletores avançados, '>','+','~' tê a mesma força na hierarquia, portanto, se sobescrevem de acordo com o conceito da cascata
+
+Exemplo
+
+TAG HTML
+
+    <main>
+        <p>Conteúdo</p>
+        <div>
+            <p>Frase X</p>
+        </div>
+
+CSS Selector
+
+    se utilizarmos o
+
+        main p {
+        }
+
+    o correto, para apenas o PRIMEIRO p, filho direto do main, devemos utilizar '>'
+
+        main > p {
+        }
+
+    para se referenciar ao PRIMEIRO p 'irmão', ou seja, abaixo da div, numa segunda hierarquia, utilizamos '+'
+    
+        div + p {
+        }
+
+    para se referenciar a TODOS os p abaixo de um irmão, utilizamos '~'
+
+        div ~ p {
+        }
+
+    </main>
+
+*/
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 480px) {
+    .caixa, .conteudo-beneficios, .mapa-conteudo, .video, .principal, .produtos, .form-contato {
+        width: auto;
+    }
+
+    .principal, .lista-beneficios {
+        padding: 1em;
+        width: auto;
+    }
+    
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .imagem-beneficios {
+        width: 100%;
+    }
+
+    .imagens-produtos {
+        width: 100%
+    }
+
+    .produtos li {
+        display: flexbox;
+        width: auto;
+        vertical-align: center;
+        margin: 1em 1em;
+    }
+
+    .form-contato {
+        padding: 1em;
+    }
+    
+}
+

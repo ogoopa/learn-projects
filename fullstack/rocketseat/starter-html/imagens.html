@@ -1,0 +1,151 @@
+<!-- 
+    <img>
+
+    - src: apontar a imagem, na web ou no projeto
+    - alt: nome da imagem, para acessibilidade  
+    - title: quando o mouse descansa na imagem
+    - width
+    - height
+    - adicionando Link
+ -->
+
+ 
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <img 
+            src="https://source.unsplash.com/random" 
+            alt="Imagem de title"
+            title="Colocar um titulo na imagem"
+            width="200px"
+        >
+        
+        <br>
+        <br>
+        <br>
+        <!-- para fazer um link com uma imagem -->
+
+        <a href="https://google.com">
+            <img 
+            src="https://source.unsplash.com/random" 
+            alt="Imagem de title"
+            title="Colocar um titulo na imagem"
+            width="200px"
+            >
+        </a>
+
+        <br>
+        <br>
+        <br>
+
+        <h2>EXERCÍCIO</h2>
+        
+        <ul>
+            <li>Colocar a seguinte imagem na página: https://rocketseat.com.br/icons/icon-48x48.png</li>
+            <li>Adicione um texto alternativo, caso a imagem não seja carregada</li>
+            <li>Adicione um título, para quando o mouse descansar em cima da imagem, seja possível visualizar o titulo</li>
+            <li>A) Adicione uma largura de 500px para a imagem</li>
+            <li>B) Depois, removendo a largura, adicione uma altura de </li>
+            <li>Por fim, adicione um link para que quando a imagem for clicada, possa redirecionar para a ulr https://rocketseat.com.br</li>
+        </ul>
+
+        <h3>A)</h3>
+
+        <a href="https://rocketseat.com.br" target="_blank">
+            <img 
+                src="https://rocketseat.com.br/icons/icon-48x48.png" 
+                alt="Icone da Rocketseat"
+                title="Logotipo da Rocketseat"
+                width="500px"
+            >
+        </a>
+
+
+        <h3>B)</h3>
+        <a href="https://rocketseat.com.br" target="_blank">
+            <img 
+                src="https://rocketseat.com.br/icons/icon-48x48.png" 
+                alt="Icone da Rocketseat"
+                title="Logotipo da Rocketseat"
+                height="50px"
+            >
+        </a>
+    
+        <!-- 
+            background-image
+            - com a tag style
+            - somente para estilo
+            - não é semântico e falta significado
+
+            <p style="background-image: url('./assets-example/ball.png')">Imagem</p>
+         --> 
+
+         <h3>Titulos visiveis para a imagem</h3>
+
+         <!-- <figure> e <figcaption> -->
+        <a href="https://google.com">
+            <figure>
+                <img 
+                src="https://source.unsplash.com/random" 
+                alt="Imagem de title"
+                title="Colocar um titulo na imagem"
+                width="500px"
+                >
+                <figcaption>Colocar um título na imagem</figcaption>
+            </figure>
+        </a>
+    
+        <!-- 
+            SVG <svg>
+                - É uma marcação, estilo html, mas não é para textos, e sim para fazer imagens
+                - Possuimos elementos para gerar formas
+
+                - Imagem rasteirizada: 
+                    normalmente está pixelada, sendo construida via pixels
+                    Para fotografias, prefira usar imagens rasteirizadas
+
+                
+                - Imagem vetorizada: feita via algorítmo
+                    Benefícios
+                        - mais leve
+                        - mais detalhada
+                        - maior acessibilidade e SEO
+                        - pode ser editada via CSS ou atributos
+
+                    Desvantagens
+                        - pode ser mais complicado de trabalhar
+                        - quanto mais complexa a imagem, mais trabalho para o navegador
+                        - navegadores mais antigos não possuem suporte a esta tag            
+         -->
+        <h3>Formato PNG - Rasteirizada</h3>
+        <img src="./assets-example/ball.png" alt=""> 
+        
+        <h3>Formato SVG - Vetorizada</h3>
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"/>
+        </svg>
+
+        <svg>
+            
+        </svg>
+
+    </body>
+    </html>
+
+    <!-- FIGMA
+    
+        Programa na WEB para edição de imagens SVG
+        Com o FIGMA, é possível importar o código SVG para o html
+
+    -->
+
+
+

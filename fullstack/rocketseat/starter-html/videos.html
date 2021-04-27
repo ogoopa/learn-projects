@@ -1,0 +1,123 @@
+<!-- 
+    <video>
+    
+    - src
+    - controls: tag para exibir os controles
+    - se não funcionar?
+        - fallback content
+    
+    - source
+        - src
+        - type
+
+    - sobre serviços de terceiros
+   
+
+<video src="" controls> 
+</video>
+
+PARA PESQUISAR MAIS SOBRE VIDEOS NO HTML, ACESSE:
+
+https://developer.mozilla.org
+
+Pesquisar: media type and format guide
+
+-->  
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video 
+        controls                                    
+        width="500px" 
+        autoplay 
+        preload="auto" 
+        loop poster="./assets-example/ball.png">
+        
+        <source src="./assets-example/rocket.mp4" type="video/mp4"> 
+    </video>
+
+
+    <!-- somente para separar -->
+    <br>
+    <br>
+    <br>
+
+    <!-- 
+        <audio>
+
+        - src
+        - controls: tag para exibir os controles
+        - se não funcionar?
+            - fallback content
+        
+        - source
+            - src
+            - type
+
+        <audio src=""></audio>
+
+        Com o JavaScript temos controles mais avançados de áudio
+    -->
+
+    <audio controls>
+        <source src="./assets-example/viper.mp3" type="audio/mp3">
+        <source src="./assets-example/viper.ogg" type="audio/ogg">
+        <p>Seu navegador não suporta o áudio.</p>
+    </audio>
+
+    <!-- somente para separar -->
+    <br>
+    <br>
+    <br>
+
+    <!-- 
+        <iframe>
+
+        - Inline Frame Elemento
+        - Elemento que irá trazer um conteúdo externo
+        - Atributos
+            - src
+            - height
+            - width
+            - title (acessibilidade)
+            - allowfullsreen
+            - frameborder
+    -->
+
+    <!-- Exemplo Video Youtube -->
+
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/0_X8mLCLQLI" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+
+    <!-- somente para separar -->
+    <br>
+    <br>
+    <br>
+
+    <!-- Exemplo Maps-->
+
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227.7040092063835!2d-46.64613067029675!3d-23.546314216819827!2m3!1f90!2f39.17152139961649!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x0%3A0x646ac06825b745e0!2sEdif%C3%ADcio%20Copan!5e1!3m2!1spt-BR!2sbr!4v1617750334941!5m2!1spt-BR!2sbr" 
+        width="1200" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+
+</body>
+</html>
