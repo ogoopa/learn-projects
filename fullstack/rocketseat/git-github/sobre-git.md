@@ -125,6 +125,8 @@ no repositório, todas as versões do arquivo ficam salvas, cada vez que você d
 
 # HASH Values (SHA-1)
 
+HASH é o numero de id que o commit cria, é a chave
+
 checksum - converte dados em numero
 
 - garante a integridade dos dados
