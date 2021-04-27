@@ -292,3 +292,122 @@ mostra em outra cor somente o trecho que foi alterado
 # Retirar tudo o que tem no cache
 
 - git rm -r --cached
+
+# Configurando a chave SSH 
+
+- conexão com a sua máquina pessoal e o github
+- ir no pergil; settings;
+- ir em SSH and GPG keys;
+    - ir no terminal / bash
+    - ssh-keygen -t rsa -b 4096 -C "gusparizi@gmail.com"
+    - apertar enter até finalizar
+    - buscar a chave
+        - cd ~/.ssh/
+        - cat ~/.ssh/id_rsa.pub
+    - copiar o código chave
+    - ir no github, SSH key, add new
+    - inserir um título, que irá representar a máquina da chave
+    - colar a chave e finalizar
+    - adicionar a chave ao gerenciador local SSH Agent
+        - no terminal / bash
+        - $ eval `sss-agent -s`
+        - > agent pid 861
+        - $ ssh-add ~/.ssh/id_rsa
+
+# linkar o repositório remoto com o local
+
+- criar um repositório local, colocar as descrições em  description, selecionar se é public (todos visualizam) ou private (vc escolhe quem visualiza);
+- adicionar manualmente (o passo a passo pode ser visto também no github);
+
+    - cd <repository>
+    - git init
+    - git add .
+    - git commit -m ":tada: first commit" 
+        - git comi
+    
+    e após:
+    
+    - git remote add origin git@guthub.com:ogudma/demo.git
+    - git remote -v <!-- verifica os repositórios existentes na nuvem -->
+    - git branch -M main <!-- criando a branch (ramificação do git) main -->
+    - git push -u origin main
+        - yes
+        - enter
+
+# modificar o arquivo local e enviar para o remoto
+
+   - git push
+
+# modificar o arquivo remoto e puxar para o repositório local
+
+   - git pull
+
+# entendendo o histórico remoto
+
+   + = adição de código
+   - = remoção de código
+    
+   pelo histórico você acessa cada commit por sua chave e consegue verificar todos os commits realizados, navegando por cada ponto do código
+    
+# corrigindo conflito de merge
+
+   os conflitos de merge ocorrem quando alterações em um arquivo são feitas paralelamente nos reposit
+
+   - git config --global pull.rebase false <!-- resolver problemas de pull -->
+   
+   - vim <arquivo> <!-- para verificar se o arquivo tem merge -->
+   - arrastar a parta para o VSCODE
+   - o C que aparece no canto do arquivo é de conflict 
+    
+   pelo VSCODE:
+   
+   - corrigir o problema, o código irá gerar uma opção para aceitar o código local ou remoto
+   - salva
+
+   no terminal / bash:
+   
+   - verificar pelo vim <arquivo>
+   - git commit -am "fixing merge"
+
+   - git pull
+   - git push
+
+# Procurando novos repositórios no Github
+
+   - no campo de pesquisa, selecionar no campo o user:ogudma e retirar, para que ele possa pesquisar em todo o github
+   - é possível pesquisar por:
+        - repositórios
+        - codigos
+        - commits
+        - issues
+        - discussões
+        - packages
+        - marketplace
+        - topics
+        - wikis
+        - users
+        
+   - é possível também filtrar por linguagem (HTML, JS, CSS, etc)
+   - é possível corrigir erros de códigos e realizar um pull request
+   - é intuitivo
+   - a busca também serve para buscar nos próprios repositórios
+    
+# os conteúdos podem ser salvos com estrela e fork
+
+   - pode ser feito um fork, no github <!-- interessante se você está colaborando com o conteúdo -->
+   - você pode atribuir uma estrela <!-- interessante se você precisa salvar um conteúdo que deseja ver depois -->
+
+# clones
+
+   - para cliar um clone, ir na tecla verde 'CODE'
+   - ir em SSH
+   - copiar o conteúdo do campo 
+
+   no terminal / bash
+    
+   - git clone <colar o conteúdo> <!-- interessante se você precisasr utilizar o projeto que encontrou no github -->
+   - git log --oneline <!-- conferir -->
+   
+   
+    
+
