@@ -9,3 +9,4 @@ no momento, estudando:
   - Angular
   - React
   - Node
+  - Git e Github
