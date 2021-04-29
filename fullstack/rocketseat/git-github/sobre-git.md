@@ -81,6 +81,9 @@ utilizado para verificar o ultimo commit realizado, irá mostrar o autor, a data
 
     - se houverem muitos commits e você quiser trazer por exemplo os 5 últimos:
     git log -n 5
+    
+    - se precisar verificar no log a alteração que foi realizada
+    git log -p
 
     - para trazer commits a partir da data x:
     git log --since=2020-10-01
@@ -95,6 +98,57 @@ utilizado para verificar o ultimo commit realizado, irá mostrar o autor, a data
     git log --grep="init"
     git log --grep="bugfix"
 
+    - para exibir somente a hash
+    git log --pretty:"format:%H"
+    
+ <!-- ENCONTRAR MAIS INFORMAÇÕES EM: https://devhints.io/git-log-format -->   
+    
+ HASH 
+  Commit  
+   - %H commit hash
+   - %h (abbrev) commit hash
+  Tree
+   - %T tree hash
+   - %t (abbrev) tree hash
+  Parent
+   - %P parent hash
+   - %p (abbrev) parent hash
+ COMMIT
+   - %s commit subject
+   - %f commit subject, filename style
+   - %b commit body
+   - %d ref names
+   - %e encoding
+  AUTHOR
+   Name
+    %an author
+    %aN author, respecting mailmap
+   Email
+    %ae author email
+    %aE " ", respecting mailmap
+   Date
+    %aD " ", rfc2882
+    %ar " ", relative
+    %at " ", unix timestramp
+    %ai " ", iso 8601
+  COMMITTER
+   Name
+    %cn " "
+    %cN " ", respecting mailmap
+   Email
+    %ce " "
+    %cE " ", " "
+   Date
+    %cD " ", "
+    %cr " ", "
+    %ct " ", "
+    %ci " ", "
+    
+  você pode mesclar os comandos, conforme abaixo
+  
+    - exibindo hash, nome e e-mail do autor
+    - $ git log --pretty="format:%h %s %ae"
+  
 # criando um arquivo
 
 git init <!-- init / clone - inicia um repositório local (-> Working Directory) --> 
@@ -235,6 +289,8 @@ vim README.md <!-- cria um arquivo chamado README.md -->
 
 - git mv file3.txt file4.txt
 
+- git remote rename <origin> <new-name> 
+
 # Movendo o arquivo
 
 mkdir sub <!-- cria uma pasta chamada sub no diretório -->
@@ -336,6 +392,17 @@ mostra em outra cor somente o trecho que foi alterado
         - yes
         - enter
 
+# git remote
+
+o comando git remote exibe todos os repositórios remotos listados
+
+para adicionar um repositório remoto
+
+$ git remote add <servidor-local-nome> C:/Users/Documents/git-e-github/servidor-local-nome/
+    <!-- pode ser uma url, um endereço na rede, uma pasta em nosso computador, qualquer endereço válido para um repositório GIT -->
+    
+$ git remote -v <!-- exibe os endereços remotos reconhecidos no git -->
+
 # modificar o arquivo local e enviar para o remoto
 
    - git push
@@ -409,7 +476,101 @@ mostra em outra cor somente o trecho que foi alterado
     
    - git clone <colar o conteúdo> <!-- interessante se você precisasr utilizar o projeto que encontrou no github -->
    - git log --oneline <!-- conferir -->
-   
-   
-    
 
+# git branch
+
+exibe a ramificação que você está (master, etc)
+   $ git branch
+   
+criando uma branch
+   $ git branch <titulo>
+   - enter
+   * master
+     <titulo>
+
+acessando a branch e alterando a branch
+   $ git checkout <titulo>
+   - switched to branch <titulo>
+
+
+alterando o commit de branch, por exemplo da branch master para a branch titulo
+exemplo prático (passo a passo)
+   
+   $ git checkout -b titulo <!-- cria e acessa uma nova branch chamada titulo -->
+   $ git commit -m "editanto nome" <!-- cria um commit para acertar um arquivo na branch titulo -->
+   $ git commit -m "adicionando lista no titulo" <!-- outra mudança no arquivo feita pelo usuário na branch titulo -->
+    
+   nesse momento, acesso a branch master
+   $ git checkout master <!-- acessa a master -->
+   $ git commit -m "corrigindo bug" <!-- cria commit para corrigir um bug na branch master -->
+   
+   continua 1... e 2...
+ 
+# MERGE
+
+   como unificar as duas branches, através da criação de um novo commit:
+   realizando o merge, da master para a titulo
+   
+   continua 1...
+   $ git merge titulo <!-- cria um comit para mesclar as duas branches, master e titulo -->
+   
+#REBASE
+
+   outra opção interessante é o rebase, um comando que permite alterar a base da branch, e com isso os commits em branches diferentes pode ser apontados e alterados para outra branch
+   
+   continua 2...
+   $ git rebase titulo 
+
+O merge junta os trabalhos e gera um merge commit. O rebase aplica os commits de outra branch na branch atual.
+   
+# visualizando o git em layout gráfico estruturado
+
+acesse: https://git-school.github.io/visualizing-git/
+
+
+
+# Ctrl+Z no Git
+
+   quanto você ainda não deu o git add (quando está na working area)
+   $ git checkout -- <index.html>
+   
+   quando já foi dado o git add (stage area)
+   $ git reset HEAD <index.html>    
+   
+   quando já foi dado o commit
+   $ git revert <HASH do commit (numeração hexa)>
+   ele criará um novo commit, desfazendo as alterações realizadas no último
+   
+# Guardando a atividade para depois
+  
+  $ git stash
+  $ git stash list <!-- acessa o stash, onde fica os arquivos em aberto para depois -->
+  
+  $ git stash apply <!-- aplica as alterações -->
+  $ git stash drop <!-- remove -->
+  $ git stash apply pop <!-- aplica as alterações -->
+  
+# aplicando CHECKPOINTS com Tags e Releases
+
+  $ git tag -a <nome-da-versão-0.1.0> -m "lançando a primeira versão beta da aplicação"
+  $ git tag
+  
+  após, é necessário dar o push
+  
+  $ git push <local> master
+  $ git push <local< <nome-da-versão-0.1.0> 
+    
+  a tag pode ser criada também no github
+  
+  $ git remote -v
+  $ git push <origin> master
+  $ git push <origin> <nome-da-versão-0.1.0> 
+  
+  no Github é possível verificar as versões através das Releases
+  essas versões podem ser baixadas por outros usuários
+  
+  
+
+
+
+   
