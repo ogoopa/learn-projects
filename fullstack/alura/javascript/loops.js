@@ -11,7 +11,7 @@ const listaDeDestinos = new Array(
 const idadeComprador = 19;
 const estaAcompanhada = false;
 let temPassagemComprada = false;
-const destino = "Salvador"
+const destino = "Maceió"
 
 console.log("\n Destinos possíveis: ")
 console.log(listaDeDestinos);
@@ -32,3 +32,27 @@ while(contador < 3) {
 }
 
 console.log("Destino existe: ", destinoExiste)
+
+/* FOR
+
+outro exemplo de laço de repetição, a estrutura é dividida em três partes:
+
+for (declara contador ; condição; incremento final) {
+};
+
+i = variável mais comum para o for (boas práticas)
+*/
+
+if (podeComprar && destinoExiste) {
+    console.log("Boa viagem!");
+} else {
+    console.log("Desculpe, tivemos um erro!");
+}
+
+for (let i = 0; i <3; i++) {
+    if (listaDeDestinos[contador] == destino) {
+        console.log("Destino existe");
+        destinoExiste = true;
+        //break;
+    }
+}

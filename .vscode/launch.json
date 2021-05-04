@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "ExercLoops",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\fullstack\\alura\\javascript\\loops.js"
+        }/* ,
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "ExercListas",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\fullstack\\alura\\javascript\\listas.js"
+        } */
+        /* o código comentado acima funciona caso seja necessário colocar no launch mais algum arquivo que precisa ser debugado */
+    ]
+}
+
+/* O launch é um iniciador da aplicação para realizar o debbuger */
