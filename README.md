@@ -10,3 +10,4 @@ no momento, estudando:
   - React
   - Node
   - Git e Github
+  - teste
