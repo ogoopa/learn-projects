@@ -16,28 +16,24 @@ import {ContaCorrente} from "./ContaCorrente.js"
 
 // declaração dos clientes
 
-const cliente1 = new Cliente();
-cliente1.nome = "Gustavo";
-cliente1.cpf = 11122233309;
-
-const cliente2 = new Cliente();
-cliente2.nome = "Letícia";
-cliente2.cpf = 88822233309;
+const cliente1 = new Cliente("Gustavo", 11122233309);
+const cliente2 = new Cliente("Letícia", 88822233309);
+//console.log(cliente2.cpf);
 
 // declaração da conta corrente cliente Gustavo
 
-const contaCorrenteGustavo = new ContaCorrente();
-contaCorrenteGustavo.agencia = 1001;
-contaCorrenteGustavo.saldo = 0;
+const conta1 = new ContaCorrente(cliente1, 1001);
+const conta2 = new ContaCorrente(cliente2, 1002);
 
-// ações
+conta1.depositar(500)
+conta1.transferir(200, conta2);
 
-contaCorrenteGustavo.depositar(100);
+console.log(ContaCorrente.numeroDeContas);
+
+/* 
+contaCorrenteGustavo.depositar(-100);
 contaCorrenteGustavo.depositar(100);
 contaCorrenteGustavo.depositar(100);
 
 const valorSacado = contaCorrenteGustavo.sacar(50);
-
-console.log(valorSacado);
-console.log(contaCorrenteGustavo);
-
+ */
