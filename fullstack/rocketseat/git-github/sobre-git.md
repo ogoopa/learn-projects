@@ -62,7 +62,7 @@ cd git-aula <!-- cd = chdir = change directory, para mudar de diretório -->
 ls <!-- listar -->
 git init <!-- inicializar diretório vazio -->
 cd .. <!-- volta diretorio anterior -->
-
+    
 
 irá aparecer um diretório escondido intitulado .git
 
